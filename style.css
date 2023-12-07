@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto Mono", monospace;
+  /* background-color:#000 ; */
 }
 
 .main {
@@ -52,10 +53,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40vw;
+  width: 50vw;
   height: 50px;
   border-radius: 20px;
-  background: rgb(202 253 255 / 50%);
+  background: rgb(202 253 255 / 50%) !important;
 }
 
 .main .input .talk {
@@ -73,11 +74,36 @@
 
 .main .input .talk i {
   font-size: 20px;
-  color: #aed0d0;
+  color: #aed0d0 !important;
 }
 
 .main .input .content {
-  color: #aed0d0;
+  color: #aed0d0 !important;
   font-size: 15px;
   margin-right: 20px;
+}
+
+@media only screen and (max-width: 300px) {
+  .main .input {
+    
+    width: 70vw;
+    
+  }
+
+  .main .image-container h1 {
+    
+    margin-bottom: 10px;
+    font-size: 30px;
+    margin-left: 6px;
+  }
+
+  .main .image-container p {
+    color: #324042;
+    text-align: center;
+    /* margin-bottom: 44px; */
+    margin: 0px 44px;
+  }
+  .main {
+    width: 100vw;
+  }
 }
