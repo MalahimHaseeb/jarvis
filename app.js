@@ -1,6 +1,6 @@
 const btn = document.querySelector('.talk')
 const content = document.querySelector('.content')
-
+const img = document.querySelector('.image')
 
 function speak(text){
     const text_speak = new SpeechSynthesisUtterance(text);
@@ -17,11 +17,11 @@ function wishMe() {
     var hour = day.getHours();
 
     if (hour >= 0 && hour < 12) {
-        speak("Good Morning Boss. I am Jarvis created by Malahim Haseeb. How can I help you...");
+        speak("Hi Sir. I am Jarvis created by Malahim Haseeb. How can I help you...");
     } else if (hour >= 12 && hour < 17) {
-        speak("Good Afternoon Master. I am Jarvis created by Malahim Haseeb. How can I help you...");
+        speak("Hi Sir. I am Jarvis created by Malahim Haseeb. How can I help you...");
     } else {
-        speak("Good Evening Sir. I am Jarvis created by Malahim Haseeb. How can I help you...");
+        speak("Hi Sir. I am Jarvis created by Malahim Haseeb. How can I help you...");
     }
 }
 
@@ -46,6 +46,10 @@ recognition.onresult = (event)=>{
 btn.addEventListener('click', ()=>{
     content.textContent = "Listening...."
     recognition.start();
+})
+img.addEventListener('click', ()=>{
+    speak("Initializing JARVIS..");
+    wishMe();
 })
 
 function takeCommand(message){
