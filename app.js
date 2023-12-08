@@ -12,23 +12,19 @@ function speak(text){
     window.speechSynthesis.speak(text_speak);
 }
 
-function wishMe(){
+function wishMe() {
     var day = new Date();
     var hour = day.getHours();
 
-    if(hour>=0 && hour<12){
-        speak("Good Morning Boss.I am jarvis created by Malahim Haseeb. How i can help you...")
+    if (hour >= 0 && hour < 12) {
+        speak("Good Morning Boss. I am Jarvis created by Malahim Haseeb. How can I help you...");
+    } else if (hour >= 12 && hour < 17) {
+        speak("Good Afternoon Master. I am Jarvis created by Malahim Haseeb. How can I help you...");
+    } else {
+        speak("Good Evening Sir. I am Jarvis created by Malahim Haseeb. How can I help you...");
     }
-
-    else if(hour>12 && hour<17){
-        speak("Good Afternoon Master.I am jarvis created by Malahim Haseeb. How i can help you...")
-    }
-
-    else{
-        speak("Good Evenining Sir.I am jarvis created by Malahim Haseeb. How i can help you...")
-    }
-
 }
+
 
 window.addEventListener('load', ()=>{
     speak("Initializing JARVIS..");
